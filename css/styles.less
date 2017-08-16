@@ -1,5 +1,31 @@
 /* LESS Variables */
-/*  */
+/*define fonts */
+@font-face {
+font-family: roboto-black;
+src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-black-webfont.ttf);
+}
+@font-face {
+font-family: roboto-italic;
+src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-italic-webfont.ttf);
+}
+@font-face {
+font-family: roboto-thin;
+src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-thin-webfont.ttf);
+}
+@font-face {
+font-family: roboto-thinitalic;
+src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-thinitalic-webfont.ttf);
+}
+/* end of define fonts */
+
+/* LESS variable for site styles */
+/* LESS variables for fonts */
+@font-family:roboto-black, helvetica, sans-serif;
+@font-base-size:14px;
+/* LESS Variables for text */
+@text-shadow: 2px 2px 2px;
+
+/* LESS variables for images */
 @img-size-wsml: 150px;
 @img-size-hsml: 150px;
 @font-base-size: 14px;
@@ -13,7 +39,11 @@
 @text-shadow-color: #FF3619;
 /*LESS Variables for text  */
 @text-shadow: 2px 2px 2px;
-@font-family:hea
+/* Positioning Variables */
+@positionR: relative;
+@positionA: absolute;
+@positionF: fixed;
+
 /*end of variable declaration */
 /*This defines Semantic Elements as blocks for older browsers  */
 article,
@@ -31,27 +61,36 @@ body {
   background-color: @background-color;
 }
 /*header*/
-div .headerlogo {
-  position:top: 5px;
-  left: 5px;
-  margin: 0 auto;
-  padding: 0 auto;
-  position: relative;
-}
 
-.headerlogo img {
+
+div .headerlogo {
   height: @img-size-hsml;
   width: @img-size-wsml;
+  margin: 0px auto;
+  padding: 0px auto;
+  top: 0px;
+  left: 0px;
+  position: @positionR;
 }
 
-div #headername span {
+  #headername {
   font-size: @font-base-size + 65px;
-  font-family: headerfont;
+  font-family: @font-family;
   text-shadow: @text-shadow-color @text-shadow;
   color: @primary-color;
+  display: inline;
   padding: 15px;
   margin: 0 2.5em;
   font-weight: bold;
+  //position: @positionA;
+}
+
+input.searchbox {
+  float: right;
+  //position: @positionR;
+  top: 30px;
+  right: 10px;
+  z-index: 15000;
 }
 /* Navigation bar styles start */
 nav {
