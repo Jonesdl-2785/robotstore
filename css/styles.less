@@ -16,18 +16,24 @@ src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-t
 font-family: roboto-thinitalic;
 src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-thinitalic-webfont.ttf);
 }
+
+@font-face {
+font-family: roboto-bold;
+src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto_slab/robotoslab-bold-webfont.ttf);
+}
 /* end of define fonts */
 
 /* LESS variable for site styles */
 /* LESS variables for fonts */
-@font-family:roboto-black, helvetica, sans-serif;
+@font-face:roboto-black, helvetica, sans-serif;
+@font-face:robot-bold, sans-serif;
 @font-base-size:14px;
 /* LESS Variables for text */
 @text-shadow: 2px 2px 2px;
 
 /* LESS variables for images */
-@img-size-wsml: 150px;
-@img-size-hsml: 150px;
+@img-size-wsml: 200px;
+@img-size-hsml: 200px;
 @font-base-size: 14px;
 /* colors */
 @primary-color: #E70909;
@@ -57,32 +63,31 @@ section {
   display: block;
 }
 
-body {
-  background-color: @background-color;
+* {
+  background-color: #F8F3F3;
+  font-family: roboto-black, sans-serif;
 }
 /*header*/
-
-
 div .headerlogo {
-  height: @img-size-hsml;
-  width: @img-size-wsml;
-  margin: 0px auto;
-  padding: 0px auto;
-  top: 0px;
-  left: 0px;
-  position: @positionR;
+  //height: @img-size-hsml;
+//width: @img-size-wsml;
 }
 
-  #headername {
-  font-size: @font-base-size + 65px;
+img logo{
+  height: @img-size-hsml;
+  width: @img-size-wsml;
+  position: fixed; top: 0; left: 0;
+}
+
+  span#headername {
+  font-size: @font-base-size + 50px;
   font-family: @font-family;
   text-shadow: @text-shadow-color @text-shadow;
   color: @primary-color;
-  display: inline;
-  padding: 15px;
-  margin: 0 2.5em;
+  padding:  27px;
+  margin: 0 50px;
   font-weight: bold;
-  //position: @positionA;
+  position: @positionA;
 }
 
 input.searchbox {
@@ -119,7 +124,7 @@ nav ul li > a:hover {
 }
 
 .navbar-background {
-  background-color: #142952;
+  background-color: #990000;
 }
 
 .navlink {
@@ -135,7 +140,7 @@ nav ul li > a:hover {
 }
 
 .navlink.active {
-  color: lightgreen;
+  color: #FF3619;
   background-color: white;
 }
 /* Navigation bar styles end */
@@ -148,4 +153,31 @@ nav ul li > a:hover {
 .threecol {
   column-count: 3;
   column-gap: 10px;
+}
+
+//robots page
+fieldset,legend{
+  border: none;
+  outline: none;
+}
+img, a {border:none, outline: none;
+}
+
+label {
+  font-family: roboto-bold, sans-serif;
+  font-size: @font-base-size + 2px;
+}
+
+ {
+  font-family: monospace, sans-serif;
+}
+fieldset p {
+  font-family: roboto-italic, sans-serif;
+}
+//footer information
+#footer{
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
 }
