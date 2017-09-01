@@ -25,8 +25,9 @@ src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto_slab/rob
 
 /* LESS variable for site styles */
 /* LESS variables for fonts */
-@font-face:roboto-black, helvetica, sans-serif;
-@font-face:robot-bold, sans-serif;
+@font-face1:roboto-black, helvetica, sans-serif;
+@font-face2:roboto-bold, sans-serif;
+@font-face3:roboto-italic, serif;
 @font-base-size:14px;
 /* LESS Variables for text */
 @text-shadow: 2px 2px 2px;
@@ -52,20 +53,13 @@ src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto_slab/rob
 
 /*end of variable declaration */
 /*This defines Semantic Elements as blocks for older browsers  */
-article,
-aside,
-figure,
-footer,
-header,
-main,
-nav,
-section {
+article, aside, figure, footer, header, main, nav, section {
   display: block;
 }
 
-* {
-  background-color: #F8F3F3;
-  font-family: roboto-black, sans-serif;
+body{
+  background-color: @background-color;
+  font: @font-face1, @font-base-size;
 }
 /*header*/
 div .headerlogo {
@@ -82,7 +76,7 @@ img logo{
   span#headername {
   font-size: @font-base-size + 50px;
   font-family: @font-family;
-  text-shadow: @text-shadow-color @text-shadow;
+  text-shadow: @text-shadow-color, @text-shadow;
   color: @primary-color;
   padding:  27px;
   margin: 0 50px;
@@ -168,10 +162,7 @@ label {
   font-size: @font-base-size + 2px;
 }
 
- {
-  font-family: monospace, sans-serif;
-}
-fieldset p {
+fieldset,label {
   font-family: roboto-italic, sans-serif;
 }
 //footer information
