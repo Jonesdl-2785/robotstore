@@ -5,59 +5,84 @@
   <meta charset="utf-8" />
   <title>Mr Robot!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" />
   <link rel="stylesheet/less" href="css/styles.less" type="text/css" />
-  <script src="/bower_components/less/dist/less.js" type="text/javascript"></script>
+  <script src="bower_components/less/dist/less.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <div>
       <a class="headerlogo" href="index.html">
-                <img src="images/logo.jpg" width="200px" height="200px"/>
-            </a>
+        <img src="images/logo.jpg" height="200px" width="200px"/>
+      </a>
       <span id="headername">Mr. Robot</span>
       <input type="search" class="searchbox" placeholder="Search our store" />
-    </div>
-    <nav class="navbar-background">
-      <ul>
-        <li><a class="navlink active" href="index.html">Home</a></li>
-        <li><a class="navlink" href="robots.html">Robots</a></li>
-        <li><a class="navlink" href="computers.html">Hardware</a></li>
-        <li><a class="navlink" href="contact.html">Contact</a></li>
-        <li><a class="navlink" href="about.html">About</a></li>
-      </ul>
-    </nav>
-  </header>
+    </div><!-- end of header div -->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Robot Store</a>
+        </div><!-- end navbar-header -->
+          <div class="collapse navbar-collapse" id="roboNavbar">
+          <ul class="nav navbar-nav">
+            <li><a class="navlink active" href="index.html">Home</a></li>
+            <li><a class="navlink" href="robots.html">Robots</a></li>
+            <li><a class="navlink" href="computers.html">Hardware</a></li>
+            <li><a class="navlink" href="about.html">About</a></li>
+            <li><a class="navlink" href="contact.html">Contact</a></li>
+          </ul><!-- end of ul -->
+        </div><!-- end collapse navbar-nav -->
+      </div><!-- end container -->
+    </nav><!-- end navigation -->
+  </header><!-- end main header -->
+<div class="row">
+  <div class="col-md-8" class="pull-right">
   <div id="welcomeimage">
-    <img src="images/welcome.jpg" />
+      <img src="images/welcome.jpg" />
+      <div class="col-md-4" class="pull-left">
+          <header id="welcome">Welcome to Mr Robot!</header>
+      </div>
+    </div><!-- end welcome image div -->
   </div>
-  <div id="coffeeofthemonth">
-    <img src="images/robot_hello.png" />
-  </div>
+</div>
+
   <section id="welcometext">
-    <header>Welcome to Mr Robot!</header>
+    <!--<header id="welcome">Welcome to Mr Robot!</header>-->
+  <!--  <div id="coffeeofthemonth">
+      <img src="images/robot_hello.png" />
+    </div><!-- end coffee of the month image -->
+    <div class="spanText">
     <span>
-      <div class="twocol">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in lobortis ex. Suspendisse vestibulum varius porta. Ut ligula risus, fermentum nec elit eget, feugiat consequat diam. Donec accumsan tristique convallis. Curabitur sit amet facilisis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sollicitudin augue et metus volutpat pellentesque. Maecenas dui quam, iaculis at massa in, varius varius lectus.
-              Fusce efficitur justo sed lobortis efficitur. Sed vel quam at mi tristique convallis non id justo. Vestibulum molestie odio sed congue tempor. Mauris at nisl a risus finibus efficitur. Mauris quis luctus erat, id auctor tellus. Nulla vel suscipit metus. Donec porta dapibus eros et finibus. Maecenas suscipit nisl sed dictum luctus. Proin suscipit laoreet ante a dictum. Donec ornare, erat quis dignissim maximus, neque ex laoreet massa, sed convallis turpis turpis ut elit. Suspendisse varius augue ante, sed fermentum dui facilisis non. Nulla neque leo, placerat ut tempor quis, ornare sed lorem. Mauris egestas sem non magna semper lobortis.
+        <div class="row">
+          <div class="col-md-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in lobortis ex. Suspendisse vestibulum varius porta. Ut ligula risus, fermentum nec elit eget, feugiat consequat diam. Donec accumsan tristique convallis. Curabitur sit amet facilisis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sollicitudin augue et metus volutpat pellentesque. Maecenas dui quam, iaculis at massa in, varius varius lectus.
+            Fusce efficitur justo sed lobortis efficitur. Sed vel quam at mi tristique convallis non id justo. Vestibulum molestie odio sed congue tempor. Mauris at nisl a risus finibus efficitur. Mauris quis luctus erat, id auctor tellus. Nulla vel suscipit metus. Donec porta dapibus eros et finibus. Maecenas suscipit nisl sed dictum luctus. Proin suscipit laoreet ante a dictum. Donec ornare, erat quis dignissim maximus, neque ex laoreet massa, sed convallis turpis turpis ut elit. Suspendisse varius augue ante, sed fermentum dui facilisis non. Nulla neque leo, placerat ut tempor quis, ornare sed lorem. Mauris egestas sem non magna semper lobortis.
+          </div>
+            <div class="col-md-2">
+              <div id="coffeeofthemonth">
+                <img src="images/robot_hello.png" />
+              </div><!-- end coffee of the month image -->
 
-              Nam in diam metus. Vivamus pharetra ac eros ac efficitur. Phasellus tristique dignissim fermentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse quis accumsan libero. Nulla viverra arcu vitae tellus consequat, at hendrerit ante vestibulum. Phasellus a ex quis orci tincidunt dapibus ut gravida arcu. Proin ac bibendum purus. Curabitur sagittis sit amet purus nec molestie. Duis egestas, ante eget lacinia consequat, sapien orci vehicula dui, et ultrices lectus quam eu turpis. Praesent molestie justo dui, sit amet tempus libero aliquet nec. Suspendisse vitae cursus arcu. Curabitur massa purus, dictum vitae finibus nec, pulvinar eu turpis. Vivamus volutpat nisl sit amet tempus mollis. Vivamus at eros vel libero aliquet mollis non nec diam. Nulla at convallis lacus, rutrum hendrerit enim. Nam in ex aliquet, tempor urna nec, ultrices lectus. Sed sit amet arcu a tortor gravida pretium quis at sem. In id dui vitae purus facilisis varius. In lacus quam, ultrices vel luctus ac, euismod in dui. In et velit mattis, pulvinar velit sit amet, malesuada leo. Maecenas et tincidunt ante, nec ornare justo. Vestibulum et volutpat orc
-
-
+              </div>
+          <div class="col-md-5">
+            Nam in diam metus. Vivamus pharetra ac eros ac efficitur. Phasellus tristique dignissim fermentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse quis accumsan libero. Nulla viverra arcu vitae tellus consequat, at hendrerit ante vestibulum. Phasellus a ex quis orci tincidunt dapibus ut gravida arcu. Proin ac bibendum purus. Curabitur sagittis sit amet purus nec molestie. Duis egestas, ante eget lacinia consequat, sapien orci vehicula dui, et ultrices lectus quam eu turpis. Praesent molestie justo dui, sit amet tempus libero aliquet nec. Suspendisse vitae cursus arcu. Curabitur massa purus, dictum vitae finibus nec, pulvinar eu turpis. Vivamus volutpat nisl sit amet tempus mollis. Vivamus at eros vel libero aliquet mollis non nec diam. Nulla at convallis lacus, rutrum hendrerit enim. Nam in ex aliquet, tempor urna nec, ultrices lectus. Sed sit amet arcu a tortor gravida pretium quis at sem. In id dui vitae purus facilisis varius. In lacus quam, ultrices vel luctus ac, euismod in dui. In et velit mattis, pulvinar velit sit amet, malesuada leo. Maecenas et tincidunt ante, nec ornare justo. Vestibulum et volutpat orc
+        </div>
+      </div>
+    <br />
             <p><mark>Note that our store is closed on Christmas eve and Christmas day.</mark></p>
-        </div><!-- end twocol -->
         </span>
-  </section>
-
+      </div><!--end spanText-->
+  </section><!-- end section -->
   <footer id="footer">
     <p>Our address is <address>1011 Crater Ave, Moon City: THE MOON</address></p>
     <p class="textcontent">All site contents is &copy; Copyright <a class="mainlink" href="http://www.mrrobot.com">Mr Robot!</a></p>
     <p class="smalltext">This page was generated on <time>09:25:04.123</time>.</p>
   </footer>
 </body>
-
 </html>

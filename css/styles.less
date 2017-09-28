@@ -1,23 +1,23 @@
 /* LESS Variables */
 /*define fonts */
-@font-face {
+@font-face1 {
 font-family: roboto-black;
 src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-black-webfont.ttf);
 }
-@font-face {
+@font-face3 {
 font-family: roboto-italic;
 src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-italic-webfont.ttf);
 }
-@font-face {
+@font-face4 {
 font-family: roboto-thin;
 src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-thin-webfont.ttf);
 }
-@font-face {
+@font-face5 {
 font-family: roboto-thinitalic;
 src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto/roboto-thinitalic-webfont.ttf);
 }
 
-@font-face {
+@font-face6 {
 font-family: roboto-bold;
 src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto_slab/robotoslab-bold-webfont.ttf);
 }
@@ -25,31 +25,45 @@ src: url(https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto_slab/rob
 
 /* LESS variable for site styles */
 /* LESS variables for fonts */
-@font-face1:roboto-black, helvetica, sans-serif;
-@font-face2:roboto-bold, sans-serif;
-@font-face3:roboto-italic, serif;
+@font-face0:'Roboto', sans-serif;
+@font-face1:'Roboto-black', sans-serif;
+@font-face2:'Roboto-bold', sans-serif;
+@font-face3:'Roboto-italic', serif;
+@font-face4: italic;
 @font-base-size:14px;
 /* LESS Variables for text */
 @text-shadow: 2px 2px 2px;
 
 /* LESS variables for images */
-@img-size-wsml: 200px;
-@img-size-hsml: 200px;
+@img-size-wsml: 225px;
+@img-size-hsml: 225px;
 @font-base-size: 14px;
 /* colors */
 @primary-color: #E70909;
 @accent-color: #422C2C;
 @foreground-color: #F8F3F3;
 @background-color: #CBC6C6;
-@primary-color: #422C2C;
+@primary-color: medium grey;
 @font-color: black;
 @text-shadow-color: #FF3619;
+@navbar-color: #990000;
 /*LESS Variables for text  */
-@text-shadow: 2px 2px 2px;
+@text-shadow: 4px 3px 0px #990000, 9px 8px 0px rgba(0,0,0,0.15);
 /* Positioning Variables */
 @positionR: relative;
 @positionA: absolute;
 @positionF: fixed;
+
+/* content */
+@font-family: Helvetica, sans-serif;
+@dlj-font: 1em;
+@dlj-para: #d9d9d9;
+//@primary-color: #acb3b5;
+@title-font: 30px, #fff, 'Helvetica', serif;
+@dlj2-font: 25px, #737373, serif;
+@dlj3-font: 20px, #737373, serif;
+@body-bg: #990000;
+
 
 /*end of variable declaration */
 /*This defines Semantic Elements as blocks for older browsers  */
@@ -58,13 +72,18 @@ article, aside, figure, footer, header, main, nav, section {
 }
 
 body{
-  background-color: @background-color;
-  font: @font-face1, @font-base-size;
+  background-color: #CBC6C6;
+  font-family: @font-face0;
+  font-size: @font-base-size;
+  width: auto;
+  height: auto;
 }
 /*header*/
 div .headerlogo {
-  //height: @img-size-hsml;
-//width: @img-size-wsml;
+  height: @img-size-hsml;
+  width: @img-size-wsml;
+  padding: 0px;
+  margin: 0px;
 }
 
 img logo{
@@ -74,12 +93,11 @@ img logo{
 }
 
   span#headername {
-  font-size: @font-base-size + 50px;
-  font-family: @font-family;
-  text-shadow: @text-shadow-color, @text-shadow;
+  font-size: @font-base-size + 60px;
+  font-family: @font-face2;
+  text-shadow: @text-shadow;
   color: @primary-color;
-  padding:  27px;
-  margin: 0 50px;
+  padding:  68px;
   font-weight: bold;
   position: @positionA;
 }
@@ -93,20 +111,26 @@ input.searchbox {
 }
 /* Navigation bar styles start */
 nav {
-  height: 45px;
+  height: 50px;
   width: 100%;
   margin-bottom: 5px;
-  margin-top: 20px;
+  margin-top: 10px;
   padding-left: 5px;
+  border: 1px 0px 1.5px 0px #000;
 }
 
+.navbar {
+  background-color: @navbar-color;
+
+}
 nav ul {
   list-style: none;
   padding: 0;
+
 }
 
 nav ul li {
-  display: block;
+  display: inline-block;
 }
 
 nav ul li > a {
@@ -114,11 +138,7 @@ nav ul li > a {
 }
 
 nav ul li > a:hover {
-  text-decoration: underline;
-}
-
-.navbar-background {
-  background-color: #990000;
+  text-decoration: none;
 }
 
 .navlink {
@@ -135,14 +155,87 @@ nav ul li > a:hover {
 
 .navlink.active {
   color: #FF3619;
-  background-color: white;
+  background-color: #fff;
+  height: auto;
+
 }
+
+a {
+  color: #73797b;
+}
+
+a:link {
+  color: #959ea1;
+  text-decoration: none;
+}
+a:visited{
+
+
+}
+a:hover{
+  color: #5c5f68;
+}
+a:active{
+
+}
+a:focus {
+
+}
+
 /* Navigation bar styles end */
 /* Navigation bar styles end */
 /* content */
+fieldset,legend{
+  margin: auto;
+  border: none;
+  outline: none;
+}
+
+.col-md-8 {
+  background-color: #990000;
+  width: 100%;
+}
+.col-md-4 header {
+  //text-align: center;
+  margin: 0 auto;
+  font-size: @font-base-size + 25px;
+  font-family: @font-face2;
+}
+.col-md-8 img {
+  //margin: 0 auto;
+  float: left;
+
+}
+
+#welcomeimage {
+  align-items: center;
+}
+#welcometext header{
+  font-size: @font-base-size + 5px;
+  font-weight: bold;
+}
+#welcometext {
+  text-align: center;
+}
+
+.spanText{
+  margin:  1em;
+}
 .twocol {
   column-count: 2;
 }
+.col-md-2 #coffeeofthemonth {
+  vertical-align: text-bottom;
+}
+.col-md-5 {
+
+//  background-color: mediumseagreen;
+  //color:white;
+  padding-top: 2px;
+text-align: justify;
+
+}
+
 
 .threecol {
   column-count: 3;
@@ -150,25 +243,147 @@ nav ul li > a:hover {
 }
 
 //robots page
-fieldset,legend{
-  border: none;
-  outline: none;
-}
-img, a {border:none, outline: none;
+div #container .jumobotron {
+  width: 100%;
+  height: 100%;
+  background-color: #990000;
 }
 
-label {
-  font-family: roboto-bold, sans-serif;
-  font-size: @font-base-size + 2px;
+.jumbotron img {
+  width: 400px;
+  border-radius: 10px;
+  opacity: .95;
+}
+.robots {
+  margin: auto;
+  border: none;
+  outline: none;
+  text-align: center;
+  background-color: rgba(128, 128, 128, .5);
+  border: 2px solid #808080;
+}
+
+#robo1 {
+}
+
+.rowContainer #robots{
+  width: 750px;
+}
+
+h4, h5 {
+  font-family: @font-face3;
+  font-size: @font-base-size + 5px;
+}
+
+.rowContainer {
+  margin: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+.rowContainer img {
+  border: 2px;
+  background-color: @foreground-color;
+  width: 200px;
+  height: 200px;
+}
+
+caption {
+  background-color: #ccc;
+}
+
+p{
+  color: 	 @dlj-para;
+  text-align: justify-distribute;
+  line-height: 1.2em;
+
+}
+[class*='col-'] {
+  padding-right: 20px;
+}
+
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+.col-xs-6 col-md-4 {
+  //background-color: blue;
+  width: 33.32%
+
+}
+art {
+  background-color: #990000;
+}
+
+.img-thumbnail {
+    //position: relative;
+    width: 100%;
+    height: 100%
+    padding: 0px;
+    margin-bottom: 2px;
+}
+
+.col-md-4 img{
+  border: .008px lightgrey;
+  padding: 2em;
+  width: 380px;
+  height: 480px;
+  color: #e6e6e6;
 }
 
 fieldset,label {
-  font-family: roboto-italic, sans-serif;
+  font-family: @font-face2;
+  font-size: @font-base-size + 2px;
+}
+//hardware page
+fieldset, legend {
+  color: @font-color;
+}
+form, label, p {
+  font-family: @font-face1;
+  font-size: @font-base-size + 4px;
+  color: maroon;
+}
+// about page
+fieldset, p, #history {
+  font-style: @font-face4;
+  font-size: @font-base-size + 4px;
+}
+
+// contact page
+div, #contactForm, p, label{
+  font-family: @font-face0;
+  color: @font-color;
+}
+input{
+  margin-left: 25px;
+}
+#email {
+  margin-left: 60px;
+}
+
+#contactForm input{
+  background-color: #fff;
+}
+
+.Highlight{
+  background-color:Yellow;
+}
+
+.LightHighlight{
+  background-color: #e5e0b0;
+}
+
+.DarkHighlight{
+  background-color: #e0c7c7;
 }
 //footer information
 #footer{
   width: 100%;
+  height: 100%;
   bottom: 0;
   left: 0;
   text-align: center;
+  line-height: .9em;
+  font-size: 10px;
+  background-color: @primary-color;
 }

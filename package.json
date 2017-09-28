@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Jonesdl-2785/RobostoreProject/issues"
   },
-  "homepage": "https://github.com/Jonesdl-2785/RobostoreProject#readme"
+  "homepage": "https://github.com/Jonesdl-2785/RobostoreProject#readme",
+  "devDependencies": {
+    "less-plugin-bower-resolve": "^0.1.0"
+  },
+  "dependencies": {
+    "npm-less": "^1.0.0"
+  }
 }
